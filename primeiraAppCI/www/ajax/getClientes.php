@@ -20,14 +20,22 @@ $query=$query = "SELECT Nome, Foto ";
       
 
 $result = sqlsrv_query($conn, $query, array(), array("Scrollable"=>"buffered"));
- 
+/* 
 $arr = array();
 if($result->num_rows > 0) {
     while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC)){
      $arr[] = $row;
     }
 }
+ */
+ $arr = array();
+if($result->num_rows > 0) {
+ while($row = $result->fetch_assoc()) {
+ $arr[] = $row;
+ }
+}
  
+
 # JSON-encode the response
 echo $json_response = json_encode($arr);
 ?>
