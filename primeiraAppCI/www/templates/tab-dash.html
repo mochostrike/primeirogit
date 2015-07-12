@@ -1,13 +1,13 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <ion-list ng-controller="MyCtrl"
+    <ion-list ng-controller="ClienteCtrl"
           show-delete="shouldShowDelete"
-          show-reorder="shouldShowReorder"
           can-swipe="listCanSwipe">
           <ion-item ng-repeat="cliente in clientes"
             class="item-thumbnail-left">
-              <h2>{{cliente.ome}}</h2>
+              <h2>{{cliente.nome}}</h2>
           </ion-item>
     </ion-list>
+    nao deu
   </ion-content>
 </ion-view>
