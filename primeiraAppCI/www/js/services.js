@@ -47,4 +47,27 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Clientes', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var clientes = [{
+
+    nome: 'pedro Sparrow',
+    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+  }, {
+
+    name: 'Max Lynx',
+
+    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+  }];
+
+  return {
+    all: function() {
+      return clientes;
+    },
+   
+  };
 });

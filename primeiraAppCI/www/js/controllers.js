@@ -2,10 +2,10 @@ angular.module('starter.controllers', [])
 
 .controller('ClienteCtrl', function($scope, $http) {
  
- getTask(); // Load all available tasks
+ getClientes(); // Load all available tasks
  function getClientes(){
    $http.get("ajax/getClientes.php").success(function(data){
-     $scope.clientes = data;
+     $scope.clientes = Clientes.all;
      
    }
    );
