@@ -18,7 +18,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
-
   });
 })
 
@@ -44,7 +43,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
-        controller: 'ClientesCtrl'
+        controller: 'ChatsCtrl'
       }
     }
   })

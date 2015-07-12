@@ -1,13 +1,33 @@
 <ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <ion-list ng-controller="ClienteCtrl"
+  <ion-content >
+    <ion-list
           show-delete="shouldShowDelete"
+          show-reorder="shouldShowReorder"
           can-swipe="listCanSwipe">
-          <ion-item ng-repeat="cliente in clientes"
+        <ion-item ng-repeat="item in chats"
             class="item-thumbnail-left">
-              <h2>{{cliente.Nome}}</h2>
-          </ion-item>
-    </ion-list>
-    nao deu
+
+    <img ng-src="{{item.face}}">
+    <h2>{{item.name}}</h2>
+    <p>{{item.lastText}}</p>
+    <ion-option-button class="button-positive"
+                       >
+      Share
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       >
+      Edit
+    </ion-option-button>
+    <ion-delete-button class="ion-minus-circled"
+                       >
+    </ion-delete-button>
+    <ion-reorder-button class="ion-navicon"
+                        on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+    </ion-reorder-button>
+
+  </ion-item>
+</ion-list>
   </ion-content>
 </ion-view>
+
+

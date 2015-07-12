@@ -1,18 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('ClienteCtrl', function($scope, $http) {
- 
- getClientes(); // Load all available tasks
- function getClientes(){
-   $http.get("ajax/getClientes.php").success(function(data){
-     $scope.clientes = Clientes.all;
-     
-   }
-   );
- };
- 
-  
-})
+.controller('ClientesCtrl', function($scope, Clientes) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
